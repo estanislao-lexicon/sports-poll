@@ -1,5 +1,43 @@
 .btn-outline-secondary.custom-hover-success:hover {
-  color: #fff;               /* Change text color to white on hover */
-  background-color: #198754; /* Success color on hover */
-  border-color: #198754;     /* Match border color to success on hover */
+  color: #fff; 
+  background-color: #198754;
+  border-color: #198754;
+}
+
+/* Initial styles for the card */
+.card-container {
+  position: relative;
+  width: 400px;
+  height: 500px;
+  overflow: hidden;
+}
+
+.card {
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 100%;
+  height: 100%; 
+}
+
+/* Slide In Right (for entering from the right) */
+.slide-in-right-enter {
+  opacity: 0;
+  transform: translateX(100%);
+}
+.slide-in-right-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* Slide Out Left (for exiting to the left) */
+.slide-out-left-exit {
+  opacity: 1;
+  transform: translateX(0);
+}
+.slide-out-left-exit-active {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: transform 0.5s ease, opacity 0.5s ease;
 }

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import data from '../data/sport-poll.json';
 
 
@@ -24,39 +25,50 @@ function Card() {
     if (!currentData) return <div>Loading...</div>;
 
   return (
-    <div className='bg-silver'>
-        <div className="container d-flex justify-content-center align-items-center vh-100">
-            <div className="card shadow"
-                    style={{ width: '400px', height: '500px' }}>
-                
-                <div className="card-header text-center">                
-                    <img 
-                        src={`/img/${currentData.sport.toLowerCase()}.png`} 
-                        alt={currentData.sport} 
-                        style={{ width: 'auto', height: 'auto', maxHeight: '150px', marginTop: '10px' }}
-                    />
-                </div>
-                
-                <div className="card-body text-center" style={{ flexGrow: 1 }}>
-                    <p className="card-text">{currentData.group}</p>
-                    <h5 className="card-title">{currentData.name}</h5>
-                    <h6 className="card-subtitle mb-4 text-body-secondary">{currentData.country}</h6>
-                    <p className="card-text mb-5">{currentData.state}</p>
-                </div>
+    <div className="container d-flex justify-content-center align-items-center vh-100">
+        <div className="card-container">
+            <TransitionGroup>
+                <CSSTransition
+                    key={currentData.name} // Use a unique key for each item to trigger animation
+                    timeout={500}
+                    classNames={{
+                        enter: 'slide-in-right-enter',
+                        enterActive: 'slide-in-right-enter-active',
+                        exit: 'slide-out-left-exit',
+                        exitActive: 'slide-out-left-exit-active',
+                    }}
+                >
+                    <div className="card shadow bg-light text-center">
+                        <div className="card-header">
+                            <img
+                                src={`/img/${currentData.sport.toLowerCase()}.png`}
+                                alt={currentData.sport}
+                                style={{ maxHeight: '150px', marginTop: '10px' }}
+                            />
+                        </div>
 
-                {/* Button Container */}
-                <div className="button-group d-flex justify-content-around mt-auto mb-3">
-                    <a href="#" className="btn btn-outline-secondary custom-hover-success" onClick={handleButtonClick}>
-                        WIN HOME
-                    </a>
-                    <a href="#" className="btn btn-outline-secondary custom-hover-success" onClick={handleButtonClick}>
-                        DRAW
-                    </a>
-                    <a href="#" className="btn btn-outline-secondary custom-hover-success" onClick={handleButtonClick}>
-                        WIN AWAY
-                    </a>
-                </div>
-            </div>
+                        <div className="card-body" style={{ flexGrow: 1 }}>
+                            <p className="card-text">{currentData.group}</p>
+                            <h5 className="card-title">{currentData.name}</h5>
+                            <h6 className="card-subtitle mb-4 text-muted">{currentData.country}</h6>
+                            <p className="card-text mb-5">{currentData.state}</p>
+                        </div>
+
+                        {/* Button Group */}
+                        <div className="button-group d-flex justify-content-around mt-auto mb-3">
+                            <button className="btn btn-outline-secondary custom-hover-success" onClick={handleButtonClick}>
+                                HOME WIN 
+                            </button>
+                            <button className="btn btn-outline-secondary custom-hover-success" onClick={handleButtonClick}>
+                                DRAW
+                            </button>
+                            <button className="btn btn-outline-secondary custom-hover-success" onClick={handleButtonClick}>
+                                AWAYS WIN
+                            </button>
+                        </div>
+                    </div>
+                </CSSTransition>
+            </TransitionGroup>
         </div>
     </div>
   );
