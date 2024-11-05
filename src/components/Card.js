@@ -25,7 +25,7 @@ function Card() {
     if (!currentData) return <div>Loading...</div>;
 
   return (
-    <div className="container d-flex justify-content-center align-items-center vh-100">
+    <div className="container d-flex justify-content-center align-items-center vh-100 bg-#dee1e6">
         <div className="card-container">
             <TransitionGroup>
                 <CSSTransition
@@ -48,7 +48,7 @@ function Card() {
                         </div>
 
                         <div className="card-body" style={{ flexGrow: 1 }}>
-                            <p className="card-text">{currentData.group}</p>
+                            <p className="card-text">{currentData.sport} - {currentData.group}</p>
                             <h5 className="card-title">{currentData.name}</h5>
                             <h6 className="card-subtitle mb-4 text-muted">{currentData.country}</h6>
                             <p className="card-text mb-5">{currentData.state}</p>
