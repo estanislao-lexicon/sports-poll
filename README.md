@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+# Sports Poll  Project Specification
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+### Test Assignment
 
-In the project directory, you can run:
+The "Sports Poll" app is a dead simple poll system around some sports events which
+can be fetched from the JSON file.
 
-### `npm start`
+It allows users to vote on each event and then shows another random event to vote
+on. There should be one poll, that displays one (random) category at a time. E.g.
+load Football category with poll options to vote on from DB, and only display those
+at a time, next browser reload would maybe display Tennis.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The polling options should be what team will win or if it will be a draw, e.g.
+- Home Team win (Team A)
+- Draw
+- Away Team win (Team B)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+### Mandatory tasks
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This exercise is expected to take 3 to 6 hours to complete.
+1. Create a page with the best design practices in mind for this small application. The design will be taken into consideration and should be visually pleasant and user friendly.
+2. You are free to use any modern JavaScript framework that you’d like. The choice of framework may impact the way we assess your assignment.
+3. It’s not allowed to use any CSS framework like Bootstrap or similar.
+4. The JSON file with the events can be accessed directly from the frontend or hardcoded in the website.
+5. The odds can be generated randomly. There is no need to keep track of votes across page reloads.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Optional tasks
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This exercise is expected to take 1 to 2 hours on top of the mandatory tasks.
+1. The page should be responsive and work well across different types of devices (desktop, mobile, tablet).
+2. Keep event votes stored in a browser local storage so they can persist across page reloads.
+3. Add different kind of visualisations based on event attributes (country, state, sport and so on). It is up to you to decide how to best represent the data.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+### Delivery
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+When you have completed the task, we’d like you to deliver the following:
+- A description of what you have done and how far you got in time allotted for the work on the project.
+- Which development tools you used and your general progression on the key issues, what you got stuck on, what you did or didn’t solve etc.
+- A step by step instruction to how to run the project.
+- Share the source code in a private code hosting on GitHub.
